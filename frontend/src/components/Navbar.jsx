@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { assets } from "../assets/assets"; // Make sure profile_pic is defined in this file
-
+import { useNavigate } from "react-router-dom";
 function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false); // State for login status
@@ -33,7 +33,7 @@ function Navbar() {
     setIsLoggedIn(true);
     setProfilePic(assets.profile_pic); // Set the profile picture URL from assets
   };
-
+  const navigate = useNavigate();
   return (
     <>
       <div className="relative">
@@ -139,7 +139,7 @@ function Navbar() {
                     </NavLink>
                     <button
                       className="hover:text-black cursor-pointer"
-                      onClick={() => setIsLoggedIn(false)}
+                      onClick={() => navigate("/login")}
                     >
                       Log out
                     </button>
