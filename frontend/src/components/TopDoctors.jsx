@@ -12,7 +12,7 @@ const navigate = useNavigate();
       <p className="text-gray-600 mb-6 text-center">Simply browse through our extensive list of trusted doctors.</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        {doctors.slice(0, 10).map((item, index) => (
+        {doctors.slice(0, 15).map((item, index) => (
           <div onClick={()=>navigate(`/appointment/${item._id}`)}
             key={index} 
             className="bg-white p-4 shadow-md rounded-lg cursor-pointer hover:shadow-xl transform hover:scale-105 transition-all duration-300"
@@ -37,7 +37,7 @@ const navigate = useNavigate();
       </div>
 
       <div className="text-center mt-8">
-        <button className="btn btn-primary px-6 py-2 rounded-full">More</button>
+        <button className="btn btn-primary px-10 py-3  rounded-full font-bold">More</button>
       </div>
     </div>
   )

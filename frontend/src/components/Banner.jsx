@@ -10,10 +10,10 @@ function Banner() {
           <div className=" space-y-12 mt-12 md:mt-32">
             <h1 className="text-4xl font-bold">
               Welcome!
-              <span className="text-blue-800">Elivating your Healthcare Experience</span>
+              <span className="text-blue-800">Elevating your Healthcare Experience</span>
             </h1>
             <p className="text-xl">
-              We provide effortless acess to personalized healthcare by seamlessly connectings doctor and patients through a unified platform
+              We provide effortless access to personalized healthcare by seamlessly connectings doctor and patients through a unified platform
             </p>
             <div className="flex justify-center space-x-6 mt-6">
   <button className="btn bg-blue-900 text-white hover:bg-blue-400 rounded-full px-10 py-2">I`m Patient</button>
