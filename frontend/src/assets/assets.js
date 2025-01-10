@@ -2,6 +2,7 @@ import appointment_img from "./appointment_img.png";
 import header_img from "./header_img.png";
 import group_profiles from "./group_profiles.png";
 import profile_pic from "./profile_pic.png";
+import Doctor_Profile from "./Doctor_Profile.jpg"
 import contact_image from "./contact_image.png";
 import about_image from "./about_image.png";
 import logo from "./logo.svg";
@@ -30,6 +31,16 @@ import doc12 from "./doc12.png";
 import doc13 from "./doc13.png";
 import doc14 from "./doc14.png";
 import doc15 from "./doc15.png";
+import DocImage1 from "./DocImage 1.avif";
+import DocImage2 from "./DocImage 2.avif";
+import DocImage3 from "./DocImage 3.avif";
+import DocImage4 from "./DocImage 4.avif";
+import DocImage5 from "./DocImage 5.avif";
+import DocImage6 from "./DocImage 6.avif";
+import DocImage7 from "./DocImage 7.avif";
+import DocImage8 from "./DocImage 8.avif";
+import DocImage9 from "./DocImage 9.avif";
+import DocImage10 from "./DocImage 10.avif";
 import Dermatologist from "./Dermatologist.svg";
 import Gastroenterologist from "./Gastroenterologist.svg";
 import General_physician from "./General_physician.svg";
@@ -46,6 +57,7 @@ export const assets = {
   verified_icon,
   info_icon,
   profile_pic,
+  Doctor_Profile,
   arrow_icon,
   contact_image,
   about_image,
@@ -55,6 +67,16 @@ export const assets = {
   upload_icon,
   stripe_logo,
   razorpay_logo,
+  DocImage1,
+  DocImage2,
+  DocImage3,
+  DocImage4,
+  DocImage5,
+  DocImage6,
+  DocImage7,
+  DocImage8,
+  DocImage9,
+  DocImage10,
 };
 
 export const specialityData = [
@@ -310,4 +332,5 @@ export const doctors = [
       line2: "Circle, Ring Road, London",
     },
   },
+  
 ];
