@@ -13,6 +13,8 @@ import MyProfile from "./pages/MyProfile";
 import Appointment from "./pages/Appointment";
 import MyAppointments from "./pages/MyAppointments";
 import TopDoctors from "./components/TopDoctors";
+import HomeVisit from "./pages/HomeVisit";
+import ClinicVisit from "./pages/ClinicVisit";
 
 function App() {
   return (
@@ -29,8 +31,11 @@ function App() {
         <Route path="/my-profile" element={<MyProfile />} />
         <Route path="/my-appointments" element={<MyAppointments />} />
         <Route path="/appointment/:docId" element={<Appointment />} />
+        <Route path="/homevisit" element={<HomeVisit />} />
+        <Route path="/clinicvisit" element={<ClinicVisit />} />
       </Routes>
       <Footer />
+
     </Router>
   );
 }

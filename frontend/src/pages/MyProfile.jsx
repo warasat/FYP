@@ -1,10 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { assets } from '../assets/assets';
-import Footer from '../components/Footer';
+import { useNavigate } from 'react-router-dom';
+
+
 
 
 const Profile = () => {
+const navigate = useNavigate();
+
   const galleryImages = [
     { id: 1, src: assets.DocImage1 },
     { id: 2, src: assets.DocImage2 },
@@ -16,9 +20,9 @@ const Profile = () => {
     { id: 8, src: assets.DocImage8 },
     { id: 9, src: assets.DocImage9 },
     { id: 10, src: assets.DocImage10 },
-    { id: 7, src: assets.DocImage7 },
-    { id: 1, src: assets.DocImage1 },
-    { id: 4, src: assets.DocImage4 },
+    { id: 11, src: assets.DocImage7 },
+    { id: 12, src: assets.DocImage1 },
+    { id: 13, src: assets.DocImage4 },
   ];
 
   const [selectedImage, setSelectedImage] = useState(null);
@@ -32,6 +36,14 @@ const Profile = () => {
   const closeModal = () => {
     setSelectedImage(null);
   };
+  const handleHomeButton = () => {
+    navigate("/my-profile/homevisit");  // Correct path
+  }
+  
+  const handleClinicButton = () => {
+    navigate("/my-profile/clinicvisit");  // Correct path
+  }
+  
 
   return (
     
@@ -53,7 +65,7 @@ const Profile = () => {
             <p className="text-2xl font-semibold">$500</p>
             <p 
               className="text-gray-600 cursor-pointer hover:text-gray-800" 
-              
+              onClick={handleHomeButton}
             >
               Home Visit
             </p>
@@ -62,7 +74,7 @@ const Profile = () => {
             <p className="text-2xl font-semibold">$900</p>
             <p 
               className="text-gray-600 cursor-pointer hover:text-gray-800" 
-              
+              onClick={handleClinicButton}
             >
               Clinic Visit
             </p>
