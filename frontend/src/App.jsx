@@ -29,13 +29,12 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/my-profile" element={<MyProfile />} />
+        <Route path="/my-profile/homevisit" element={<HomeVisit />} />
+        <Route path="/my-profile/clinicvisit" element={<ClinicVisit />} />
         <Route path="/my-appointments" element={<MyAppointments />} />
         <Route path="/appointment/:docId" element={<Appointment />} />
-        <Route path="/homevisit" element={<HomeVisit />} />
-        <Route path="/clinicvisit" element={<ClinicVisit />} />
       </Routes>
       <Footer />
-
     </Router>
   );
 }

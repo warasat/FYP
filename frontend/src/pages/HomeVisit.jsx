@@ -4,41 +4,41 @@
 // function HomeVisit() {
 //   return (
 //     <div>
-      
+
 //     </div>
 //   )
 // }
 
 // export default HomeVisit
 
-import React, { useState } from 'react';
-import Calendar from 'react-calendar'; // Import the calendar component
-import 'react-calendar/dist/Calendar.css'; // Import calendar styles
+import React, { useState } from "react";
+import Calendar from "react-calendar"; // Import the calendar component
+import "react-calendar/dist/Calendar.css"; // Import calendar styles
 
 const HomeVisit = () => {
   // Example data for the doctor's profile and patient requests
   const doctor = {
     id: 1,
-    name: 'Dr. Sarah Johnson',
-    specialty: 'Cardiologist',
-    location: 'New York, NY',
-    experience: '10+ Years',
+    name: "Dr. Sarah Johnson",
+    specialty: "Cardiologist",
+    location: "New York, NY",
+    experience: "10+ Years",
   };
 
   const patientRequests = [
     {
       id: 1,
-      patientName: 'Alice Brown',
-      patientContact: '123-456-7890',
-      requestedDate: '2025-01-20',
-      visitType: 'Home Visit',
+      patientName: "Alice Brown",
+      patientContact: "123-456-7890",
+      requestedDate: "2025-01-20",
+      visitType: "Home Visit",
     },
     {
       id: 2,
-      patientName: 'Bob Miller',
-      patientContact: '987-654-3210',
-      requestedDate: '2025-01-21',
-      visitType: 'Home Visit',
+      patientName: "Bob Miller",
+      patientContact: "987-654-3210",
+      requestedDate: "2025-01-21",
+      visitType: "Home Visit",
     },
   ];
 
@@ -49,7 +49,8 @@ const HomeVisit = () => {
     setSelectedDate(date);
     // Filter patient requests based on the selected date
     const requestsForDate = patientRequests.filter(
-      (request) => new Date(request.requestedDate).toDateString() === date.toDateString()
+      (request) =>
+        new Date(request.requestedDate).toDateString() === date.toDateString()
     );
     setRequestsForSelectedDate(requestsForDate);
   };
@@ -92,12 +93,20 @@ const HomeVisit = () => {
       {/* Patient Requests for Selected Date */}
       {requestsForSelectedDate.length > 0 ? (
         <div className="mt-10">
-          <h2 className="text-xl font-bold mb-4">Patient Requests for {selectedDate.toDateString()}</h2>
+          <h2 className="text-xl font-bold mb-4">
+            Patient Requests for {selectedDate.toDateString()}
+          </h2>
           {requestsForSelectedDate.map((request) => (
             <div key={request.id} className="bg-gray-100 p-6 rounded-lg mb-4">
-              <p><strong>Patient Name:</strong> {request.patientName}</p>
-              <p><strong>Contact:</strong> {request.patientContact}</p>
-              <p><strong>Requested Visit Type:</strong> {request.visitType}</p>
+              <p>
+                <strong>Patient Name:</strong> {request.patientName}
+              </p>
+              <p>
+                <strong>Contact:</strong> {request.patientContact}
+              </p>
+              <p>
+                <strong>Requested Visit Type:</strong> {request.visitType}
+              </p>
 
               <div className="mt-4 space-x-4">
                 <button
@@ -124,4 +133,3 @@ const HomeVisit = () => {
 };
 
 export default HomeVisit;
-
