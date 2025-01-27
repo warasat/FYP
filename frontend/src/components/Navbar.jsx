@@ -147,7 +147,7 @@ function Navbar() {
                     My appointments
                   </NavLink>
                   <button
-                    className="hover:text-black cursor-pointer"
+                    className="hover:text-black cursor-pointer "
                     onClick={handleLogout} // Handle logout
                   >
                     Log out
