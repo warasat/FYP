@@ -33,6 +33,7 @@ const Profile = () => {
   const closeModal = () => {
     setSelectedImage(null);
   };
+
   const handleHomeButton = () => {
     navigate("/my-profile/homevisit"); // Correct path
   };
@@ -61,7 +62,7 @@ const Profile = () => {
             <div className="text-center">
               <p className="text-2xl font-semibold">$500</p>
               <button
-                className="text-gray-600 cursor-pointer hover:text-gray-800"
+                className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-gray-300 focus:outline-none"
                 onClick={handleHomeButton}
               >
                 Home Visit
@@ -70,7 +71,7 @@ const Profile = () => {
             <div className="text-center">
               <p className="text-2xl font-semibold">$900</p>
               <button
-                className="text-gray-600 cursor-pointer hover:text-gray-800"
+                className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-gray-300 focus:outline-none"
                 onClick={handleClinicButton}
               >
                 Clinic Visit
@@ -79,6 +80,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
+
       {/* Photo Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {galleryImages.map((image) => (
@@ -113,9 +115,7 @@ const Profile = () => {
       <div className="mt-20 px-6">
         {/* Area of Interest Section */}
         <div className="mb-8">
-          <h1 className="text-black font-bold text-xl mb-6">
-            Area of Interest
-          </h1>
+          <h1 className="text-black font-bold text-xl mb-6">Area of Interest</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Chronic Disease */}
             <div className="flex flex-col items-center">
@@ -140,9 +140,7 @@ const Profile = () => {
                   className="w-8 h-8"
                 />
               </div>
-              <p className="text-gray-700 mt-2 text-center">
-                Ear Nose and Throat
-              </p>
+              <p className="text-gray-700 mt-2 text-center">Ear Nose and Throat</p>
             </div>
           </div>
         </div>

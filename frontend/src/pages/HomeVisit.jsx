@@ -1,17 +1,6 @@
 /* eslint-disable no-unused-vars */
-// import React from 'react'
-
-// function HomeVisit() {
-//   return (
-//     <div>
-
-//     </div>
-//   )
-// }
-
-// export default HomeVisit
-
 import React, { useState } from "react";
+import { assets } from "../assets/assets";
 import Calendar from "react-calendar"; // Import the calendar component
 import "react-calendar/dist/Calendar.css"; // Import calendar styles
 
@@ -68,7 +57,7 @@ const HomeVisit = () => {
       {/* Doctor's Profile */}
       <div className="flex items-center mb-8">
         <img
-          src="path/to/doctor-image.jpg" // Placeholder for doctor's image
+          src={assets.Doctor_Profile} // Placeholder for doctor's image
           alt="Doctor Profile"
           className="w-32 h-32 rounded-full object-cover"
         />
