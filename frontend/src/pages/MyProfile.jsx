@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
+import Modal from "./Modal";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -76,6 +77,9 @@ const Profile = () => {
               >
                 Clinic Visit
               </button>
+            </div>
+            <div className="text-center">
+              <Modal />
             </div>
           </div>
         </div>
