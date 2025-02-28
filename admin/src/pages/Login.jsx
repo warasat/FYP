@@ -88,6 +88,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { AdminContext } from "../context/AdminContext";
 import axios from 'axios';
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [state, setState] = useState("Admin");
@@ -106,9 +107,11 @@ const Login = () => {
 
         if (data.success) {
           console.log("Token: ", data.token);  // Log token
+          localStorage.setItem('aToken', data.token)
           setAToken(data.token);  // Save token using context
         } else {
-          console.log("Login failed: ", data.message);  // Log error message from backend
+          //console.log("Login failed: ", data.message);  // Log error message from backend
+          toast.error(data.message)
         }
       } else {
         // Logic for doctor login here
