@@ -15,10 +15,13 @@ import MyAppointments from "./pages/MyAppointments";
 import TopDoctors from "./components/TopDoctors";
 import HomeVisit from "./pages/HomeVisit";
 import ClinicVisit from "./pages/ClinicVisit";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <Router>
+      <ToastContainer />
       <Navbar />
 
       <Routes>

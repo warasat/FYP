@@ -5,21 +5,27 @@ import cookieParser from "cookie-parser";
 import connectDB from "./config/db.js"; // Database connection file
 import connectCloudinary from "./config/cloudinary.js";
 import adminRouter from "./routes/adminRoute.js";
+import doctorRouter from "./routes/doctorRoute.js";
+import userRouter from "./routes/userRoute.js";
 dotenv.config();
 connectDB(); // Connect to MongoDB
 connectCloudinary();
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174"],  // Array of allowed origins
-  credentials: true  // Allows cookies to be sent with the request
-}));
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "http://localhost:5174"], // Array of allowed origins
+    credentials: true, // Allows cookies to be sent with the request
+  })
+);
 
-app.use(express.json({strict: false}));
+app.use(express.json({ strict: false }));
 app.use(cookieParser());
 // API ENDPOINTS
 app.use("/api/admin", adminRouter);
+app.use("/api/doctor", doctorRouter);
+app.use("/api/user",userRouter)
 // Test Route
 app.get("/", (req, res) => {
   res.send("API is running...");
